@@ -24,6 +24,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Appinfo from "./pages/Appinfo.jsx";
 
+
 axios.interceptors.response.use(
     response => response,
     error => {
@@ -48,34 +49,49 @@ function App() {
           <Routes>
 
               <Route path="/login" element={<Login />} />
+
               <Route
                   path="/*"
                   element={
-                      <div>
-                          <UserProvider>
-                          <NavBar toggleBar={toggleBar} showBar={showBar} />
-                          <div className="main">
-                              <SideBar showBar={showBar} />
-                              <div className="content">
-                                  <PrivateRoute>
-                                  <Routes>
-                                      <Route path="/" element={<Dashboard />} />
-                                      <Route path="/products" element={<Products />} />
-                                      <Route path="/categories" element={<Categories />} />
-                                      <Route path="/sales" element={<Sales />} />
-                                      <Route path="/purchases" element={<Purchases />} />
-                                      <Route path="/suppliers" element={<Suppliers />} />
-                                      <Route path="/customers" element={<Customers />} />
-                                      <Route path="/account" element={<Account />} />
-                                      <Route path="/appinfo" element={<Appinfo />} />
-                                      <Route path="/users" element={<ProtectedRoute role='admin'><Users /></ProtectedRoute>} />
-                                      <Route path="/settings" element={<ProtectedRoute role='admin'><Settings /></ProtectedRoute>} />
-                                  </Routes>
-                                  </PrivateRoute>
-                              </div>
+                      <PrivateRoute>
+                          <div>
+                              <UserProvider>
+                                  <NavBar toggleBar={toggleBar} showBar={showBar} />
+                                  <div className="main">
+                                      <SideBar showBar={showBar} />
+                                      <div className="content">
+                                          <Routes>
+                                              <Route path="/" element={<Dashboard />} />
+                                              <Route path="/products" element={<Products />} />
+                                              <Route path="/categories" element={<Categories />} />
+                                              <Route path="/sales" element={<Sales />} />
+                                              <Route path="/purchases" element={<Purchases />} />
+                                              <Route path="/suppliers" element={<Suppliers />} />
+                                              <Route path="/customers" element={<Customers />} />
+                                              <Route path="/account" element={<Account />} />
+                                              <Route path="/appinfo" element={<Appinfo />} />
+                                              <Route
+                                                  path="/users"
+                                                  element={
+                                                      <ProtectedRoute role="admin">
+                                                          <Users />
+                                                      </ProtectedRoute>
+                                                  }
+                                              />
+                                              <Route
+                                                  path="/settings"
+                                                  element={
+                                                      <ProtectedRoute role="admin">
+                                                          <Settings />
+                                                      </ProtectedRoute>
+                                                  }
+                                              />
+                                          </Routes>
+                                      </div>
+                                  </div>
+                              </UserProvider>
                           </div>
-                          </UserProvider>
-                      </div>
+                      </PrivateRoute>
                   }
               />
           </Routes>
