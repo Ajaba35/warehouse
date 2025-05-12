@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
@@ -32,6 +32,10 @@ const Login = () => {
             toast.error(data.message);
         }
     };
+
+    useEffect(() => {
+        document.title = 'Login';
+    }, []);
 
 
     return (
