@@ -1,12 +1,12 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "cross-port-killer 5011",
-    "start": "node server.js",
-    "dev": "cross-port-killer 5013 && node server.js"
+    "start": "node backend/server.js",
+    "dev": "cross-port-killer 5013 && node backend/server.js"
   },
   "keywords": [],
   "author": "",
