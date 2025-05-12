@@ -11,7 +11,7 @@ import Products from "./pages/Products.jsx";
 import Categories from "./pages/Categories.jsx";
 import Sales from "./pages/Sales.jsx";
 import Purchases from "./pages/Purchases.jsx";
-import Suppliers from "./pages/suppliers.jsx";
+import Suppliers from "./pages/Suppliers.jsx";
 import Customers from "./pages/Customers.jsx";
 import Account from "./pages/Account.jsx"
 import Settings from "./pages/Settings.jsx";
