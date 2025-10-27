@@ -1,5 +1,4 @@
 import express from "express";
-import jwt from 'jsonwebtoken';
 import db from "../db.js";
 import authToken from "../middleware/authToken.js";
 

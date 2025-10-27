@@ -1,6 +1,5 @@
 import {Link, NavLink} from 'react-router-dom';
 import { useUser } from '../context/UserContext';
-import { Navigate } from 'react-router-dom';
 
 
 const SideBar = ({showBar}) => {
