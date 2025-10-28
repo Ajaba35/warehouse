@@ -10,7 +10,7 @@ const LowStockAlert = () => {
     const fetchLowStock = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/products/fetchLowStock', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/products/fetchLowStock', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },

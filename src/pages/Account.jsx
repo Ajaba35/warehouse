@@ -33,7 +33,7 @@ const Account = () => {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put('http://localhost:5015/api/users/updateMe', {fullname:fullName, email:newEmail, password:newPassword},{
+            const response = await axios.put('https://warehouse-2riz.onrender.com/api/users/updateMe', {fullname:fullName, email:newEmail, password:newPassword},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

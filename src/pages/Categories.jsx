@@ -30,7 +30,7 @@ function Categories() {
     const fetchCategories = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/categories/fetchCategory', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/categories/fetchCategory', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -51,7 +51,7 @@ function Categories() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.delete(`http://localhost:5015/api/categories/deleteCategory/${categoryId}`, {
+            const response = await axios.delete(`https://warehouse-2riz.onrender.com/api/categories/deleteCategory/${categoryId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -70,7 +70,7 @@ function Categories() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5015/api/categories/updateCategory/${categoryId}`, {name: Newname},{
+            const response = await axios.put(`https://warehouse-2riz.onrender.com/api/categories/updateCategory/${categoryId}`, {name: Newname},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -101,7 +101,7 @@ function Categories() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5015/api/categories/addCategory', {code: newCode, name: newName},{
+            const response = await axios.post('https://warehouse-2riz.onrender.com/api/categories/addCategory', {code: newCode, name: newName},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

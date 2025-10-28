@@ -18,7 +18,7 @@ const Settings = () => {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put('http://localhost:5015/api/settings/updateSettings', {systemName:systemName, defaultCurrency:defaultCurrency},{
+            const response = await axios.put('https://warehouse-2riz.onrender.com/api/settings/updateSettings', {systemName:systemName, defaultCurrency:defaultCurrency},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -29,7 +29,7 @@ const Settings = () => {
     const fetchSystemInfo = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/settings/fetchSettings', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/settings/fetchSettings', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

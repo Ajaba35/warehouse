@@ -40,7 +40,7 @@ function Users() {
     const fetchUsers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/users/fetchUser', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/users/fetchUser', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -64,7 +64,7 @@ function Users() {
         }
         try {
             const token = localStorage.getItem('token');
-                const response = await axios.post('http://localhost:5015/api/users/addUser', {fullname: newName, email: newEmail, password: newPassword, role: newRole},{
+                const response = await axios.post('https://warehouse-2riz.onrender.com/api/users/addUser', {fullname: newName, email: newEmail, password: newPassword, role: newRole},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -83,7 +83,7 @@ function Users() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.delete(`http://localhost:5015/api/users/deleteUser/${userId}`, {
+            const response = await axios.delete(`https://warehouse-2riz.onrender.com/api/users/deleteUser/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -103,7 +103,7 @@ function Users() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5015/api/users/updateUser/${userId}`, {fullname: newName, email: newEmail, password: newPassword, role: newRole},{
+            const response = await axios.put(`https://warehouse-2riz.onrender.com/api/users/updateUser/${userId}`, {fullname: newName, email: newEmail, password: newPassword, role: newRole},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

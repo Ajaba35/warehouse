@@ -36,7 +36,7 @@ const HighestSellingProducts = () => {
     const fetchHighSelling = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/products/fetchHighSelling', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/products/fetchHighSelling', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },

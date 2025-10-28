@@ -52,7 +52,7 @@ function Products() {
             if (searchText.trim() !== '') {
                 params.code = searchText.trim();
             }
-            const response = await axios.get('http://localhost:5015/api/products/fetchProduct', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/products/fetchProduct', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -80,7 +80,7 @@ function Products() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5015/api/products/addProduct', {code: newCode, name: newName, price: newPrice, category_id:selectedCategory},{
+            const response = await axios.post('https://warehouse-2riz.onrender.com/api/products/addProduct', {code: newCode, name: newName, price: newPrice, category_id:selectedCategory},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -96,7 +96,7 @@ function Products() {
     const fetchCategories = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/categories/fetchCategory', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/categories/fetchCategory', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -117,7 +117,7 @@ function Products() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.delete(`http://localhost:5015/api/products/deleteProduct/${productId}`, {
+            const response = await axios.delete(`https://warehouse-2riz.onrender.com/api/products/deleteProduct/${productId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -135,7 +135,7 @@ function Products() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5015/api/products/updateProduct/${productId}`, {name: Newname, price:newPrice, category_id:selectedCategory},{
+            const response = await axios.put(`https://warehouse-2riz.onrender.com/api/products/updateProduct/${productId}`, {name: Newname, price:newPrice, category_id:selectedCategory},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

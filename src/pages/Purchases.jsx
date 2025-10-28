@@ -55,7 +55,7 @@ function Purchases() {
     const fetchSuppliers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/suppliers/fetchSupplier', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/suppliers/fetchSupplier', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -73,7 +73,7 @@ function Purchases() {
     const fetchProducts = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/products/fetchProduct', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/products/fetchProduct', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -116,7 +116,7 @@ function Purchases() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5015/api/purchases/addPurchase', {code: newCode, supplier: selectedSupplier, product: selectedProduct, quantity: newQuantity, unit_price: unitPrice, total_price: newTotal},{
+            const response = await axios.post('https://warehouse-2riz.onrender.com/api/purchases/addPurchase', {code: newCode, supplier: selectedSupplier, product: selectedProduct, quantity: newQuantity, unit_price: unitPrice, total_price: newTotal},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -140,7 +140,7 @@ function Purchases() {
                 params.searchText = text;
             }
 
-            const response = await axios.get('http://localhost:5015/api/purchases/fetchPurchase', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/purchases/fetchPurchase', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -169,7 +169,7 @@ function Purchases() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.delete(`http://localhost:5015/api/purchases/deletePurchase/${purchaseId}`, {
+            const response = await axios.delete(`https://warehouse-2riz.onrender.com/api/purchases/deletePurchase/${purchaseId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -190,7 +190,7 @@ function Purchases() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5015/api/purchases/updatePurchase/${purchaseId}`, {supplier: selectedSupplier, product: selectedProduct, quantity: newQuantity, unit_price: unitPrice, total_price: newTotal},{
+            const response = await axios.put(`https://warehouse-2riz.onrender.com/api/purchases/updatePurchase/${purchaseId}`, {supplier: selectedSupplier, product: selectedProduct, quantity: newQuantity, unit_price: unitPrice, total_price: newTotal},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
         const fetchUser = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5015/api/users/me', {
+                const response = await axios.get('https://warehouse-2riz.onrender.com/api/users/me', {
                     headers: { 'Authorization': `Bearer ${token}` },
                 });
                 setUser(response.data);

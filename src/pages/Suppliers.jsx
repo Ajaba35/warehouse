@@ -39,7 +39,7 @@ function Suppliers() {
     const fetchSuppliersCount = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/suppliers/fetchSupplierCount', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/suppliers/fetchSupplierCount', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -57,7 +57,7 @@ function Suppliers() {
     const fetchSuppliers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/suppliers/fetchSupplier', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/suppliers/fetchSupplier', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -89,7 +89,7 @@ function Suppliers() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5015/api/suppliers/addSupplier', {code: newCode, name: newName, location: newLocation, phone: newPhone},{
+            const response = await axios.post('https://warehouse-2riz.onrender.com/api/suppliers/addSupplier', {code: newCode, name: newName, location: newLocation, phone: newPhone},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -108,7 +108,7 @@ function Suppliers() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.delete(`http://localhost:5015/api/suppliers/deleteSupplier/${supplierId}`, {
+            const response = await axios.delete(`https://warehouse-2riz.onrender.com/api/suppliers/deleteSupplier/${supplierId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -128,7 +128,7 @@ function Suppliers() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5015/api/suppliers/updateSupplier/${supplierId}`, {name: Newname, location: newLocation, phone: newPhone},{
+            const response = await axios.put(`https://warehouse-2riz.onrender.com/api/suppliers/updateSupplier/${supplierId}`, {name: Newname, location: newLocation, phone: newPhone},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

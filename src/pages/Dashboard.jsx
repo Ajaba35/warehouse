@@ -23,7 +23,7 @@ function Dashboard() {
     const fetchSales = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/sales/fetchSale', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/sales/fetchSale', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -45,7 +45,7 @@ function Dashboard() {
     const fetchProducts = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/products/fetchProduct', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/products/fetchProduct', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -63,7 +63,7 @@ function Dashboard() {
     const fetchCustomers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/customers/fetchCustomer', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/customers/fetchCustomer', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

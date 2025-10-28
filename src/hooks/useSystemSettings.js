@@ -9,7 +9,7 @@ const useSystemSettings = () => {
     const fetchSystemInfo = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/settings/fetchSettings', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/settings/fetchSettings', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

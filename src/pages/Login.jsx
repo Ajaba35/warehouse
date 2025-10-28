@@ -14,7 +14,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:5015/api/users/login', {
+        const response = await fetch('https://warehouse-2riz.onrender.com/api/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

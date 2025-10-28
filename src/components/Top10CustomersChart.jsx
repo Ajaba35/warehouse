@@ -12,7 +12,7 @@ const Top10CustomersChart = () => {
     const fetchTopCustomers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/sales/fetchTopCustomers', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/sales/fetchTopCustomers', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },

@@ -39,7 +39,7 @@ function Customers() {
     const fetchCustomers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5015/api/customers/fetchCustomer', {
+            const response = await axios.get('https://warehouse-2riz.onrender.com/api/customers/fetchCustomer', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -68,7 +68,7 @@ function Customers() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5015/api/customers/addCustomer', {code: newCode, name: newName, location: newLocation, phone: newPhone},{
+            const response = await axios.post('https://warehouse-2riz.onrender.com/api/customers/addCustomer', {code: newCode, name: newName, location: newLocation, phone: newPhone},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -87,7 +87,7 @@ function Customers() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.delete(`http://localhost:5015/api/customers/deleteCustomer/${customerId}`, {
+            const response = await axios.delete(`https://warehouse-2riz.onrender.com/api/customers/deleteCustomer/${customerId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -107,7 +107,7 @@ function Customers() {
         }
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5015/api/customers/updateCustomer/${customerId}`, {name: Newname, location: newLocation, phone: newPhone},{
+            const response = await axios.put(`https://warehouse-2riz.onrender.com/api/customers/updateCustomer/${customerId}`, {name: Newname, location: newLocation, phone: newPhone},{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
