@@ -118,7 +118,7 @@ INSERT INTO `products` (`id`, `code`, `name`, `category_id`, `price`, `stock`, `
 CREATE TABLE `purchases` (
   `id` int(11) NOT NULL,
   `code` varchar(50) NOT NULL,
-  `date` date NOT NULL DEFAULT curdate(),
+  `date` datetime NOT NULL DEFAULT current_timestamp(),
   `supplier` int(11) DEFAULT NULL,
   `product` int(11) DEFAULT NULL,
   `quantity` int(11) NOT NULL,
